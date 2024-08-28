@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572771031371",
+    "project_id": "chanting-62b1b",
+    "storage_bucket": "chanting-62b1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572771031371:android:605bd6df8282713250b0ce",
+        "android_client_info": {
+          "package_name": "com.e"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuoWrAlBieGtPmAb1q67PwDougMVafpYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

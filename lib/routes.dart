@@ -1,6 +1,7 @@
 import 'package:chanting/common/widgets/error.dart';
 import 'package:chanting/features/auth/screens/login_screen.dart';
 import 'package:chanting/features/auth/screens/otp_screen.dart';
+import 'package:chanting/features/auth/screens/user_information.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -8,7 +9,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case LoginScreen.routeName:
       return MaterialPageRoute(builder: (context) => const LoginScreen());
     case OTPScreen.routeName:
-      return MaterialPageRoute(builder: (context) => const OTPScreen());
+      final verificationId = settings.arguments as String;
+      return MaterialPageRoute(
+          builder: (context) => OTPScreen(
+                verificationId: verificationId,
+              ));
+    case UserInformationScreen.routeName:
+      return MaterialPageRoute(
+          builder: (context) => const UserInformationScreen());
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(

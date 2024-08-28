@@ -2,11 +2,10 @@ import 'package:chanting/colors.dart';
 import 'package:chanting/features/landing/screens/landing_screen.dart';
 import 'package:chanting/firebase_options.dart';
 import 'package:chanting/routes.dart';
-import 'package:chanting/screens/mobile_screen_layout.dart';
-import 'package:chanting/screens/web_layout_screen.dart';
-import 'package:chanting/utils/responsive_layout.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +13,11 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
